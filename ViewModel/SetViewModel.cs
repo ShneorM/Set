@@ -80,7 +80,7 @@ public class SetViewModel : INotifyPropertyChanged
             //if the cards Set Do....
             if (GamePlay.checkSet(userSetList) == true)
             {
-                for (int i = 0; i < 12 ; ++i)
+                for (int i = 0; i < 12; ++i)
                 {
                     if (ChosenCard[i] == true)
                     {
@@ -94,13 +94,18 @@ public class SetViewModel : INotifyPropertyChanged
                         onPropertyChanged("OptionalSet");
                     }
 
+
+                    //Check if the game is over
+                    if (UnUsedCards.Count == 0)
+                    {
+                        MessageBox.Show("Well done!\nyou won!");
+                        break;
+                    }
+
                     //Checking that there is sure to be a set on the board
                     if (i == 11 && findingSetToHint() == false)
                         i = 0;
 
-                    //Check if the game is over
-                    if (UnUsedCards.Count <= 16 && findingSetToHint() == false)
-                        MessageBox.Show("Well done!\nyou won!");
                 }
             }
             else//Do Something Bad
