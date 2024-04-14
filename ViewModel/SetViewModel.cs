@@ -9,7 +9,6 @@ public class SetViewModel : INotifyPropertyChanged
 {
     private DB dB;
     List<Card> userSetList;
-    bool[] chosenCard;
 
     //Ctor
     public SetViewModel()
@@ -64,14 +63,16 @@ public class SetViewModel : INotifyPropertyChanged
         if (GamePlay.contain(card, userSetList) == false)
         {
             userSetList.Add(card);
-            chosenCard[placementOnTheBoard] = true;
+            ChosenCard[placementOnTheBoard] = true;
         }
         else
         {
             userSetList.Remove(card);
-            chosenCard[placementOnTheBoard] = false;
+            ChosenCard[placementOnTheBoard] = false;
+            onPropertyChanged("ChosenCard");//Update the display after user's choose
             return;//Surely there is no Set, so we will finish
         };
+
 
         //Check if the user choose three cards
         if (userSetList.Count == 3)
@@ -79,9 +80,9 @@ public class SetViewModel : INotifyPropertyChanged
             //if the cards Set Do....
             if (GamePlay.checkSet(userSetList) == true)
             {
-                for (int i = 0; i < 12; ++i)
+                for (int i = 0; i < 12 ; ++i)
                 {
-                    if (chosenCard[i] == true)
+                    if (ChosenCard[i] == true)
                     {
                         GamePlay.moveOneCardToTheGameBoard(UnUsedCards, UsedCards, CurrentCards, i);
                         //Manual activation of the change 
@@ -91,13 +92,15 @@ public class SetViewModel : INotifyPropertyChanged
 
                         optionalSet = new bool[12];
                         onPropertyChanged("OptionalSet");
-
-                        //Check if the game is over
-                        if (UnUsedCards.Count <= 16 && findingSetToHint() == false)
-                            MessageBox.Show("Well done!\nyou won!");
-
-
                     }
+
+                    //Checking that there is sure to be a set on the board
+                    if (i == 11 && findingSetToHint() == false)
+                        i = 0;
+
+                    //Check if the game is over
+                    if (UnUsedCards.Count <= 16 && findingSetToHint() == false)
+                        MessageBox.Show("Well done!\nyou won!");
                 }
             }
             else//Do Something Bad
@@ -110,6 +113,7 @@ public class SetViewModel : INotifyPropertyChanged
             chosenCard = new bool[12];
             optionalSet = new bool[12];
         }
+        onPropertyChanged("ChosenCard");//Update the display after user's choose
     }
 
 
@@ -143,13 +147,21 @@ public class SetViewModel : INotifyPropertyChanged
         get { return currentCards; }
         set { currentCards = value; onPropertyChanged("CurrentCards"); }
     }
-    private bool[] optionalSet;
 
+    private bool[] optionalSet;
     public bool[] OptionalSet
     {
         get { return optionalSet; }
         set { optionalSet = value; onPropertyChanged("OptionalSet"); }
     }
+
+    private bool[] chosenCard;
+    public bool[] ChosenCard
+    {
+        get { return chosenCard; }
+        set { chosenCard = value; onPropertyChanged("ChosenCard"); }
+    }
+
 
     #endregion
 

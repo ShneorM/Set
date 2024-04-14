@@ -17,4 +17,10 @@ public class Card
     {
         return shape + fill + color + number;
     }
+    public override bool Equals(object? obj)
+    {
+        Card card = obj as Card;
+        return (card.shape == this.shape && card.fill == this.fill &&
+                card.color == this.color && card.number == this.number);
+    }
 }

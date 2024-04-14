@@ -44,62 +44,62 @@
 
 
             <!-- קלף 0 -->
-            <Button Grid.Row="0" Grid.Column="1" Background="Transparent" BorderThickness="2" BorderBrush="{Binding OptionalSet[0], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard0}" CommandParameter="{Binding CurrentCards[0], Converter={StaticResource CardToPathConvertKey}}">
+            <Button Grid.Row="0" Grid.Column="1" Background="{Binding ChosenCard[0],Converter={StaticResource ChooseOfUserConvertKey}}" BorderThickness="2" BorderBrush="{Binding OptionalSet[0], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard0}" CommandParameter="{Binding CurrentCards[0], Converter={StaticResource CardToPathConvertKey}}" Style="{StaticResource removeDefaultDisplay}">
                 <Image Source="{Binding CurrentCards[0], Converter={StaticResource CardToPathConvertKey}, Mode=TwoWay}" />
             </Button>
 
             <!-- קלף 1 -->
-            <Button Grid.Row="0" Grid.Column="2" Background="Transparent" BorderThickness="2" BorderBrush="{Binding OptionalSet[1], Converter={StaticResource CardOfSetConvertKey}}" Command="{Binding AddCard1}" CommandParameter="{Binding CurrentCards[1], Converter={StaticResource CardToPathConvertKey}}">
+            <Button Grid.Row="0" Grid.Column="2" Background="{Binding ChosenCard[1],Converter={StaticResource ChooseOfUserConvertKey}}" BorderThickness="2" BorderBrush="{Binding OptionalSet[1], Converter={StaticResource CardOfSetConvertKey}}" Command="{Binding AddCard1}" CommandParameter="{Binding CurrentCards[1], Converter={StaticResource CardToPathConvertKey}}" Style="{StaticResource removeDefaultDisplay}">
                 <Image Source="{Binding CurrentCards[1], Converter={StaticResource CardToPathConvertKey}, Mode=TwoWay}" />
             </Button>
 
             <!-- קלף 2 -->
-            <Button Grid.Row="0" Grid.Column="3" Background="Transparent" BorderThickness="2" BorderBrush="{Binding OptionalSet[2], Converter={StaticResource CardOfSetConvertKey}}" Command="{Binding AddCard2}" CommandParameter="{Binding CurrentCards[2], Converter={StaticResource CardToPathConvertKey}}">
+            <Button Grid.Row="0" Grid.Column="3" Background="{Binding ChosenCard[2],Converter={StaticResource ChooseOfUserConvertKey}}" BorderThickness="2" BorderBrush="{Binding OptionalSet[2], Converter={StaticResource CardOfSetConvertKey}}" Command="{Binding AddCard2}" CommandParameter="{Binding CurrentCards[2], Converter={StaticResource CardToPathConvertKey}}" Style="{StaticResource removeDefaultDisplay}">
                 <Image Source="{Binding CurrentCards[2], Converter={StaticResource CardToPathConvertKey}, Mode=TwoWay}" />
             </Button>
 
             <!-- קלף 3 -->
-            <Button Grid.Row="0" Grid.Column="4" Background="Transparent" BorderThickness="2" BorderBrush="{Binding OptionalSet[3], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard3}" CommandParameter="{Binding CurrentCards[3], Converter={StaticResource CardToPathConvertKey}}">
+            <Button Grid.Row="0" Grid.Column="4" Background="{Binding ChosenCard[3],Converter={StaticResource ChooseOfUserConvertKey}}" BorderThickness="2" BorderBrush="{Binding OptionalSet[3], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard3}" CommandParameter="{Binding CurrentCards[3], Converter={StaticResource CardToPathConvertKey}}" Style="{StaticResource removeDefaultDisplay}">
                 <Image Source="{Binding CurrentCards[3], Converter={StaticResource CardToPathConvertKey}, Mode=TwoWay}" />
             </Button>
 
             <!-- קלף 4 -->
-            <Button Grid.Row="1" Grid.Column="1" Background="Transparent" BorderThickness="2" BorderBrush="{Binding OptionalSet[4], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard4}" CommandParameter="{Binding CurrentCards[4], Converter={StaticResource CardToPathConvertKey}}">
+            <Button Grid.Row="1" Grid.Column="1" Background="{Binding ChosenCard[4],Converter={StaticResource ChooseOfUserConvertKey}}" BorderThickness="2" BorderBrush="{Binding OptionalSet[4], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard4}" CommandParameter="{Binding CurrentCards[4], Converter={StaticResource CardToPathConvertKey}}" Style="{StaticResource removeDefaultDisplay}">
                 <Image Source="{Binding CurrentCards[4], Converter={StaticResource CardToPathConvertKey}, Mode=TwoWay}" />
             </Button>
 
             <!-- קלף 5 -->
-            <Button Grid.Row="1" Grid.Column="2" Background="Transparent" BorderThickness="2" BorderBrush="{Binding OptionalSet[5], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard5}" CommandParameter="{Binding CurrentCards[5], Converter={StaticResource CardToPathConvertKey}}">
+            <Button Grid.Row="1" Grid.Column="2" Background="{Binding ChosenCard[5],Converter={StaticResource ChooseOfUserConvertKey}}" BorderThickness="2" BorderBrush="{Binding OptionalSet[5], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard5}" CommandParameter="{Binding CurrentCards[5], Converter={StaticResource CardToPathConvertKey}}" Style="{StaticResource removeDefaultDisplay}">
                 <Image Source="{Binding CurrentCards[5], Converter={StaticResource CardToPathConvertKey}, Mode=TwoWay}" />
             </Button>
 
             <!-- קלף 6 -->
-            <Button Grid.Row="1" Grid.Column="3" Background="Transparent" BorderThickness="2" BorderBrush="{Binding OptionalSet[6], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard6}" CommandParameter="{Binding CurrentCards[6], Converter={StaticResource CardToPathConvertKey}}">
+            <Button Grid.Row="1" Grid.Column="3" Background="{Binding ChosenCard[6],Converter={StaticResource ChooseOfUserConvertKey}}" BorderThickness="2" BorderBrush="{Binding OptionalSet[6], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard6}" CommandParameter="{Binding CurrentCards[6], Converter={StaticResource CardToPathConvertKey}}" Style="{StaticResource removeDefaultDisplay}">
                 <Image Source="{Binding CurrentCards[6], Converter={StaticResource CardToPathConvertKey}, Mode=TwoWay}" />
             </Button>
 
             <!-- קלף 7 -->
-            <Button Grid.Row="1" Grid.Column="4" Background="Transparent" BorderThickness="2" BorderBrush="{Binding OptionalSet[7], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard7}" CommandParameter="{Binding CurrentCards[7], Converter={StaticResource CardToPathConvertKey}}">
+            <Button Grid.Row="1" Grid.Column="4" Background="{Binding ChosenCard[7],Converter={StaticResource ChooseOfUserConvertKey}}" BorderThickness="2" BorderBrush="{Binding OptionalSet[7], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard7}" CommandParameter="{Binding CurrentCards[7], Converter={StaticResource CardToPathConvertKey}}" Style="{StaticResource removeDefaultDisplay}">
                 <Image Source="{Binding CurrentCards[7], Converter={StaticResource CardToPathConvertKey}, Mode=TwoWay}" />
             </Button>
 
             <!-- קלף 8 -->
-            <Button Grid.Row="2" Grid.Column="1" Background="Transparent" BorderThickness="2" BorderBrush="{Binding OptionalSet[8], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard8}" CommandParameter="{Binding CurrentCards[8], Converter={StaticResource CardToPathConvertKey}}">
+            <Button Grid.Row="2" Grid.Column="1" Background="{Binding ChosenCard[8],Converter={StaticResource ChooseOfUserConvertKey}}" BorderThickness="2" BorderBrush="{Binding OptionalSet[8], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard8}" CommandParameter="{Binding CurrentCards[8], Converter={StaticResource CardToPathConvertKey}}" Style="{StaticResource removeDefaultDisplay}">
                 <Image Source="{Binding CurrentCards[8], Converter={StaticResource CardToPathConvertKey}, Mode=TwoWay}" />
             </Button>
 
             <!-- קלף 9 -->
-            <Button Grid.Row="2" Grid.Column="2" Background="Transparent" BorderThickness="2" BorderBrush="{Binding OptionalSet[9], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard9}" CommandParameter="{Binding CurrentCards[9], Converter={StaticResource CardToPathConvertKey}}">
+            <Button Grid.Row="2" Grid.Column="2" Background="{Binding ChosenCard[9],Converter={StaticResource ChooseOfUserConvertKey}}" BorderThickness="2" BorderBrush="{Binding OptionalSet[9], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard9}" CommandParameter="{Binding CurrentCards[9], Converter={StaticResource CardToPathConvertKey}}" Style="{StaticResource removeDefaultDisplay}">
                 <Image Source="{Binding CurrentCards[9], Converter={StaticResource CardToPathConvertKey}, Mode=TwoWay}" />
             </Button>
 
             <!-- קלף 10 -->
-            <Button Grid.Row="2" Grid.Column="3" Background="Transparent" BorderThickness="2" BorderBrush="{Binding OptionalSet[10], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard10}" CommandParameter="{Binding CurrentCards[10], Converter={StaticResource CardToPathConvertKey}}">
+            <Button Grid.Row="2" Grid.Column="3" Background="{Binding ChosenCard[10],Converter={StaticResource ChooseOfUserConvertKey}}" BorderThickness="2" BorderBrush="{Binding OptionalSet[10], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard10}" CommandParameter="{Binding CurrentCards[10], Converter={StaticResource CardToPathConvertKey}}" Style="{StaticResource removeDefaultDisplay}">
                 <Image Source="{Binding CurrentCards[10], Converter={StaticResource CardToPathConvertKey}, Mode=TwoWay}" />
             </Button>
 
             <!-- קלף 11 -->
-            <Button Grid.Row="2" Grid.Column="4" Background="Transparent" BorderThickness="2" BorderBrush="{Binding OptionalSet[11], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard11}" CommandParameter="{Binding CurrentCards[11], Converter={StaticResource CardToPathConvertKey}}">
+            <Button Grid.Row="2" Grid.Column="4" Background="{Binding ChosenCard[11],Converter={StaticResource ChooseOfUserConvertKey}}" BorderThickness="2" BorderBrush="{Binding OptionalSet[11], Converter={StaticResource CardOfSetConvertKey}}"  Command="{Binding AddCard11}" CommandParameter="{Binding CurrentCards[11], Converter={StaticResource CardToPathConvertKey}}" Style="{StaticResource removeDefaultDisplay}">
                 <Image Source="{Binding CurrentCards[11], Converter={StaticResource CardToPathConvertKey}, Mode=TwoWay}" />
             </Button>
 

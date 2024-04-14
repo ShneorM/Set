@@ -6,7 +6,8 @@
         xmlns:local="clr-namespace:Set"
         xmlns:view="clr-namespace:Set.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Icon="Model/icon.png"
+        Title="Set" Height="450" Width="800">
     <Grid>
         <view:SetView/>
     </Grid>

@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Model\icon.png" />
     <None Remove="Model\Images\DiamondOpenGreen1.png" />
     <None Remove="Model\Images\DiamondOpenGreen2.png" />
     <None Remove="Model\Images\DiamondOpenGreen3.png" />
@@ -92,6 +93,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Model\icon.png" />
     <Resource Include="Model\Images\DiamondOpenGreen1.png" />
     <Resource Include="Model\Images\DiamondOpenGreen2.png" />
     <Resource Include="Model\Images\DiamondOpenGreen3.png" />

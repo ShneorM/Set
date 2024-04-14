@@ -6,6 +6,7 @@
     <Application.Resources>
         <local:CardToPathConvert x:Key="CardToPathConvertKey"/>
         <local:CardOfSetConvert x:Key="CardOfSetConvertKey"/>
+        <local:ChooseOfUserConvert x:Key="ChooseOfUserConvertKey"/>
 
 
         <Style TargetType="Image">
@@ -14,9 +15,26 @@
             <Setter Property="VerticalAlignment" Value="Center"/>
         </Style>
 
-        <!-- הגדרת סגנון עבור המסגרת שמכילה את התמונה -->
+        
         <Style TargetType="Border">
             <Setter Property="CornerRadius" Value="10"/>
+        </Style>
+
+        <!--Removes the default display that the mouse is on a button-->
+        <Style TargetType="Button" x:Key="removeDefaultDisplay">
+            <Setter Property="OverridesDefaultStyle" Value="True"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Padding="{TemplateBinding Padding}">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
         </Style>
 
 
